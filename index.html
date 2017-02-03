@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Learning PouchDB</title>
+    <link rel="stylesheet" type="text/css" href="/css/jquery.dataTables.min.css">
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            table-layout: fixed;
+        }
+        
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        
+        td {
+            word-wrap: break-word;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+        
+        .content-block {
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        
+        .edit {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<div class="content-block">
+    <section id="addSection">
+        <h3>Add</h3>
+        <input id="enter-text" placeholder="Enter text to save" autofocus>
+        <button id="save">Save text</button>
+        <button id="show">Show all text</button>
+        <button id="reset">Clear DB</button>
+    </section>
+
+
+    <section id="searchSection">
+        <h3>Search for exact name</h3>
+        <input id="search-text" placeholder="Search" autofocus>
+        <button id="grep">Find title</button>
+    </section>
+
+    <section id="find-results">
+
+    </section>
+
+
+    <section id="display">
+        <h3>Select ALL and display using Data tables</h3>
+        <table id="pouch-data">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Title</th>
+                    <th>Created At</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </section>
+</div>
+<script src="/js/jquery-3.1.1.min.js"></script>
+<script src="/js/jquery.dataTables.min.js"></script>
+<script src="/js/pouchdb.min.js"></script>
+<script src="/js/pouchdb.quick-search.min.js"></script>
+<script src="/js/app.js"></script>
+</body>
+
+</html>
